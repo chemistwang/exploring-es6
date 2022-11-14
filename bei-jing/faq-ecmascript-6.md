@@ -1,2 +1,0 @@
-# FAQ：ECMAScript 6
-
