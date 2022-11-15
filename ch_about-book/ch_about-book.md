@@ -79,7 +79,7 @@ _协议_ 这个术语在计算机中有很多含义。根据语言上下文和AP
 一个函数的（类型）签名描述了该方法如何调用，它的输入和输出是什么。在本书中，我用了 Microsoft 的 TypeScript 和 Facebook 的 Flow 语法。一个签名示例：
 
 ```javascript
-parseInt(string: ,radix?: number): number
+parseInt(string: string,radix?: number): number
 ```
 
 可以看到，`parseInt()` 期望一个字符串和一个数字，并且返回一个数字。如果一个参数类型很明确，我通常会省略类型声明。

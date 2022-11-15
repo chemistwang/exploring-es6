@@ -1,11 +1,11 @@
 # Table of contents
 
 * [目录](README.md)
-  * [关于这本书我们需要知道](mu-lu/guan-yu-zhe-ben-shu-wo-men-xu-yao-zhi-dao.md)
-  * [前言](mu-lu/qian-yan.md)
-  * [序](mu-lu/xu.md)
-  * [致谢](mu-lu/zhi-xie.md)
-  * [关于作者](mu-lu/guan-yu-zuo-zhe.md)
+  * [关于这本书我们需要知道](ch\_about-book/ch\_about-book.md)
+  * [前言](ch\_about-book/ch\_foreword.md)
+  * [序](ch\_about-book/ch\_preface.md)
+  * [致谢](ch\_about-book/ch\_acknowledgements.md)
+  * [关于作者](ch\_about-book/ch\_about-author.md)
 * [Ⅰ 背景](bei-jing/README.md)
   * [1. 关于 ECMAScript 6 （ES6）](bei-jing/1.-guan-yu-ecmascript-6-es6.md)
   * [2. FAQ：ECMAScript 6](bei-jing/2.-faq-ecmascript-6.md)
