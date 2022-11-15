@@ -86,6 +86,19 @@ parseInt(string: string,radix?: number): number
 
 ### 内部插槽
 
+ES6 的语言规范使用内部插槽存储内部数据。在规范中，可以通过访问方括号属性一样访问内部插槽：
+
+```javascript
+O.[[GetPrototypeOf]]()
+```
+
+它们有两点跟属性不同：
+
+* 它们不通过 get 操作符读取，也不通过 set 操作符写入。
+* 只在规范所知，无法从 JavaScript 中访问。比如：一个对象和它的原型之间的。 the link between an object and its prototype is the internal slot `[[Prototype]]`. The value of that slot cannot be read directly via JavaScript, but you can use `Object.getPrototypeOf()` to do so.
+
+How exactly internal slots are stored is left unspecified. Some may not even exist in actual JavaScript implementations.
+
 ### 绑定和环境
 
 ### 破坏性操作
