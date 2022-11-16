@@ -95,15 +95,17 @@ O.[[GetPrototypeOf]]()
 它们有两点跟属性不同：
 
 * 它们不通过 get 操作符读取，也不通过 set 操作符写入。
-* 只在规范所知，无法从 JavaScript 中访问。比如：一个对象和它的原型之间的。 the link between an object and its prototype is the internal slot `[[Prototype]]`. The value of that slot cannot be read directly via JavaScript, but you can use `Object.getPrototypeOf()` to do so.
+* 只在规范所知，无法从 JavaScript 中访问。比如：一个对象和它的原型之间的是通过内部插槽 `[[Prototype]]`关联。该插槽的值无法通过 JavaScript 直接读取，不过可以用 Object.getPrototypeOf() 去获取。
 
-How exactly internal slots are stored is left unspecified. Some may not even exist in actual JavaScript implementations.
+内部插槽是如何存储的目前没被确定。有些甚至不存在于 JavaScript 的实现中。
 
 ### 绑定和环境
 
+ECMAScript 规范中使用了一种称为环境的数据结构，用来存储一个作用域中的变量。环境是基于一个字典，也就是一组组变量名和值的映射关系。绑定则是一个变量环境，存储空间的入口。
+
 ### 破坏性操作
 
-
+破坏性操作（方法，函数）会修改参数或者它们的接收者。例如：
 
 ## 约定
 
