@@ -105,13 +105,47 @@ ECMAScript 规范中使用了一种称为环境的数据结构，用来存储一
 
 ### 破坏性操作
 
-破坏性操作（方法，函数）会修改参数或者它们的接收者。例如：
+破坏性操作（方法，函数）会修改参数或者它们的接收者。例如：push() 会改变 arr：
+
+```javascript
+> const arr = ['a', 'b'];
+> arr.push('c')
+3
+> arr
+['a', 'b', 'c']
+```
+
+相反，concat() 会创建一个新数组，而且不会改变 arr：
+
+```javascript
+> const arr = ['a', 'b'];
+> arr.concat(['c'])
+['a', 'b', 'c']
+> arr
+['a', 'b']
+```
 
 ## 约定
 
 ### 定义类
 
+一个名为 c 的类，它的 API 通常被如下记录：
+
+* c 构造函数
+* c 的静态方法
+* C.prototype 方法
+
 ### 大小写
+
+英语中，我会这么约定 JavaScript 的大小写：
+
+* 原始类型不大写：boolean，number，symbol，string。我这么做其中一个原因是 TypeScript 和 Flow 会将它们区别开：
+  * String 类型：它的成员是对象，String的实例
+  * string 类型：它的成员是基础类型，字符串
+* Map 这个数据结构大写。原因：区别于 Array 的方法 map()
+* Set 这个数据结构大写。原因：区别于动词 set.
+* Array 和 Promise 大写。原因：容易和它们的英语单词混淆
+* 不大写（暂时）：object，generator，proxy
 
 ## Github 上的示例代码
 
@@ -130,3 +164,8 @@ ECMAScript 规范中使用了一种称为环境的数据结构，用来存储一
 侧边栏是标有图表的文本框。它们是正常文本的补充。
 
 ## 脚注
+
+有时，我会用脚注引用（公开可用的）外部材料。这俩用前缀是方括号的记号来标注：
+
+* \[Spec] 引用的是 ES6 HTML 版本规范中的内容
+* \[Speaking JS] 引用的是 Speaking JavaScript HTML 版本中的内容
