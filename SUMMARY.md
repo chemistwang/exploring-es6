@@ -10,7 +10,7 @@
   * [1. 关于 ECMAScript 6 （ES6）](bei-jing/1.-guan-yu-ecmascript-6-es6.md)
   * [2. FAQ：ECMAScript 6](bei-jing/2.-faq-ecmascript-6.md)
   * [3. 一个 JavaScript：避免在 ECMAScript 6 中存在版本控制](bei-jing/3.-yi-ge-javascript-bi-mian-zai-ecmascript-6-zhong-cun-zai-ban-ben-kong-zhi.md)
-  * [4. ES6 核心新特性](bei-jing/4.-es6-he-xin-xin-te-xing.md)
+  * [4. ES6 核心特性](bei-jing/4.-es6-he-xin-xin-te-xing.md)
 * [Ⅱ 数据](shu-ju/README.md)
   * [5. number 和 Math 新特性](shu-ju/5.-number-he-math-xin-te-xing.md)
   * [6. string 新特性](shu-ju/6.-string-xin-te-xing.md)
