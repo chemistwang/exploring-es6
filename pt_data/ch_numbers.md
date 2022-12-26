@@ -536,7 +536,16 @@ Math.cbrt(x) 返回 x （∛x）的立方根。
 
 如果一个小片段在0之后，则它可以表示更精确。我将用小数来演示一下（JavaScript 的 number 在内部用 2 为基数存储， but the same reasoning applies）。
 
+以 10 为底的浮点数在内部表示为 尾数 x 10^exponent。尾数在小数点之前有一个数字，指数根据需要“移动”该点。That means if you convert a small fraction to the internal representation, a zero before the dot leads to a smaller mantissa than a one before the dot. For example:
 
+* (A) 0.000000234 = 2.34 × 10−7. Significant digits: 234
+* (B) 1.000000234 = 1.000000234 × 100. Significant digits: 1000000234
+
+Precision-wise, the important quantity here is the capacity of the mantissa, as measured in significant digits. That’s why (A) gives you higher precision than (B).
+
+Additionally, JavaScript represents numbers close to zero (e.g. small fractions) with higher precision.
+
+\#### 5.4.2.1 Math.expm1(x)
 
 
 
