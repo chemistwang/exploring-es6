@@ -12,7 +12,7 @@
   * [3. 一个 JavaScript：避免在 ECMAScript 6 中存在版本控制](bei-jing/3.-yi-ge-javascript-bi-mian-zai-ecmascript-6-zhong-cun-zai-ban-ben-kong-zhi.md)
   * [4. ES6 核心特性](bei-jing/4.-es6-he-xin-xin-te-xing.md)
 * [Ⅱ 数据](shu-ju/README.md)
-  * [5. number 和 Math 新特性](shu-ju/5.-number-he-math-xin-te-xing.md)
+  * [5. number 和 Math 新特性](pt\_data/ch\_numbers.md)
   * [6. string 新特性](shu-ju/6.-string-xin-te-xing.md)
   * [7. Symbols](shu-ju/7.-symbols.md)
   * [8. 模板字符串](shu-ju/8.-mo-ban-zi-fu-chuan.md)

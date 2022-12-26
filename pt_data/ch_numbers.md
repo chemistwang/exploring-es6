@@ -468,9 +468,77 @@ isSafeInteger(a) && isSafeInteger(b) && isSafeInteger(a op b)
 
 ### 5.4 新的 Math 功能
 
+全局对象 Math 在 ECMAScript6 中有几个新方法。
+
 #### 5.4.1 多种数值功能
 
+\#### 5.4.1.1 Math.sign(x)
+
+Math.sign(x) 返回：
+
+* \-1 如果 x 是一个负数（包括 -Infinity）
+* 0 如果 x 是 0
+* \+1 如果 x 是一个正数（包括 Infinity）
+* NaN 如果 x 是 NaN 或者不是一个 number
+
+例子：
+
+```
+> Math.sign(-8)
+-1
+> Math.sign(3)
+1
+
+> Math.sign(0)
+0
+> Math.sign(NaN)
+NaN
+
+> Math.sign(-Infinity)
+-1
+> Math.sign(Infinity)
+1
+```
+
+\#### 5.4.1.2 Math.trunc(x)
+
+Math.trunc 用来移除 x 的小数部分。是其他 rounding 方法 Math.floor() Math.ceil() 和 Math.round() 的补充。
+
+```
+> Math.trunc(3.1)
+3
+> Math.trunc(3.9)
+3
+> Math.trunc(-3.1)
+-3
+> Math.trunc(-3.9)
+-3
+```
+
+你也可以这么实现 Math.trunc()：
+
+```javascript
+function trunc(x) {
+    return Math.sign(x) * Math.floor(Math.abs(x));
+}
+```
+
+\#### 5.4.1.2 Math.cbrt(x)
+
+Math.cbrt(x) 返回 x （∛x）的立方根。
+
+```
+> Math.cbrt(8)
+2
+```
+
 #### 5.4.2 用 0 而不是 1 求幂和对数
+
+如果一个小片段在0之后，则它可以表示更精确。我将用小数来演示一下（JavaScript 的 number 在内部用 2 为基数存储， but the same reasoning applies）。
+
+
+
+
 
 #### 5.4.3 以 2 和 10 为底的对数
 
